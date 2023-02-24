@@ -28,8 +28,8 @@ namespace sy
 
 		if (Input::GetKeyState(eKeyCode::R) == eKeyState::PRESSED)
 		{
-			Vector3 rot = tr->GetRotation();
-			rot.z += 10.0f * Time::DeltaTime();
+			Quaternion rot = tr->GetRotation();
+			rot =  Quaternion::CreateFromAxisAngle(Vector3::Forward, 10.0f * Time::DeltaTime()) * rot;
 			tr->SetRotation(rot);
 		}
 

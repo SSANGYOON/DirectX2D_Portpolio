@@ -82,6 +82,12 @@
     <Filter Include="Scene\OpeningScene">
       <UniqueIdentifier>{240fb628-3641-4f70-bf36-57f7ca8c4ab8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource\SpriteAnimation">
+      <UniqueIdentifier>{96c8810b-f4b4-40fb-b3b3-429b64744339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\PrefabTemplates">
+      <UniqueIdentifier>{3df6c2b5-01c8-4374-9a8d-f6b388d81fbb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="syGraphicDevice.cpp">
@@ -174,6 +180,7 @@
     <ClCompile Include="syFadeInScript.cpp">
       <Filter>Component\Script</Filter>
     </ClCompile>
+    <ClCompile Include="sySpriteAnimation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="syGraphicDevice.h">
@@ -284,6 +291,7 @@
     <ClInclude Include="syFadeInScript.h">
       <Filter>Component\Script</Filter>
     </ClInclude>
+    <ClInclude Include="sySpriteAnimation.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="syMath.inl">

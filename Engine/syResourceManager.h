@@ -24,19 +24,16 @@ namespace sy
 		template <typename T>
 		static std::shared_ptr<T> Load(const std::wstring& key, const std::wstring& path)
 		{
-			// 키값으로 탐색
 			std::shared_ptr<T> resource = ResourceManager::Find<T>(key);
 			if (nullptr != resource)
 			{
-				// 해당키로 이미 로딩된게 있으면 해당 리소스를 반환
 				return resource;
 			}
 
-			// 해당 키로 로딩된 리소스가 없다.
 			resource = std::make_shared<T>();
 			if (FAILED(resource->Load(path)))
 			{
-				MessageBox(nullptr, L"Image Load Failed!", L"Error", MB_OK);
+				MessageBox(nullptr, L"Resource Load Failed!", L"Error", MB_OK);
 				return nullptr;
 			}
 
@@ -51,11 +48,6 @@ namespace sy
 		static void Insert(const std::wstring& key, std::shared_ptr<T> resource)
 		{
 			mResources.insert(std::make_pair(key, std::dynamic_pointer_cast<Resource>(resource)));
-		}
-
-		static void deleteTest()
-		{
-			int a = 0;
 		}
 
 	private:

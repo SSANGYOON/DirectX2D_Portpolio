@@ -33,6 +33,7 @@ namespace sy::enums
 		Mesh,
 		Texture,
 		Material,
+		SpriteAnimation,
 		Sound,
 		Prefab,
 		MeshData,

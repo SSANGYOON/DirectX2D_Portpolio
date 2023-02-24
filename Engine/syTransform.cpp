@@ -10,7 +10,7 @@ namespace sy
 		, mRight(Vector3::Right)
 		, mUp(Vector3::Up)
 		, mScale(Vector3::One)
-		, mRotation(Vector3::Zero)
+		, mRotation(Quaternion::Identity)
 		, mPosition(Vector3::One)
 		, mParent(nullptr)
 	{
@@ -36,9 +36,7 @@ namespace sy
 
 
 		Matrix rotation;
-		rotation = Matrix::CreateRotationX(mRotation.x);
-		rotation *= Matrix::CreateRotationY(mRotation.y);
-		rotation *= Matrix::CreateRotationZ(mRotation.z);
+		rotation = Matrix::CreateFromQuaternion(mRotation);
 
 
 		Matrix position;

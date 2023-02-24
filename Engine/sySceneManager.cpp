@@ -59,7 +59,7 @@ namespace sy
 		obj->SetName(L"SMILE");
 		Transform* tr = obj->GetComponent<Transform>();
 		tr->SetPosition(Vector3(-3.0f, 0.0f, 11.0f));
-		tr->SetRotation(Vector3(0.0f, 0.0f, XM_PIDIV2));
+		tr->SetRotation(Quaternion::CreateFromAxisAngle(Vector3::Forward, XM_PIDIV2));
 		tr->SetScale(Vector3(1.0f, 1.0f, 1.0f));
 
 		MeshRenderrer* mr = obj->AddComponent<MeshRenderrer>();

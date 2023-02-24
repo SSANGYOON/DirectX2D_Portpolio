@@ -22,5 +22,6 @@ namespace sy
 		std::wstring mKey;
 		std::wstring mPath;
 		ResourceType mType;
+
 	};
 }

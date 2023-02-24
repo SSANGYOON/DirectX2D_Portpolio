@@ -33,10 +33,7 @@ namespace sy
 	}
 	void Scene::Render()
 	{
-		for (Layer& layer : mLayers)
-		{
-			layer.Render();
-		}
+		mLayers[(UINT)enums::LayerType::Camera].Render();
 	}
 	void Scene::Exit()
 	{

@@ -130,9 +130,6 @@ namespace sy
 			{
 				Layer& layer = scene->GetLayer((LayerType)i);
 				GameObjects gameObjects = layer.GetGameObjects();
-				if (gameObjects.size() == 0)
-					continue;
-
 				for (std::shared_ptr<GameObject> obj : gameObjects)
 				{
 					pushGameObjectToRenderingModes(obj.get());
@@ -182,9 +179,6 @@ namespace sy
 			return;
 
 		std::shared_ptr<Material> material = renderrer->GetMaterial();
-		//if (material == nullptr)
-		//	continue;
-
 		RenderingMode mode = material->GetRenderingMode();
 
 		switch (mode)

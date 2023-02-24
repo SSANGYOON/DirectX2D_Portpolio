@@ -1,0 +1,27 @@
+---
+
+Prefab_type : "RenderedObject" # SceneObject(camera, light source, eventmanager.. etc), Component 
+Name : "GameObject"
+
+GameObject :
+  layer : "Player"
+  RenderType : "Sprite"
+  Children :
+    - Name : "ChildName"
+    - Path : "ChildPath"
+
+    - Name : "ChildName"
+    - Path : "ChildPath"
+
+  Components :
+    - Name : "ComponentName"
+      Path : "ComponentPath"
+    
+    - Name : "ComponentName"
+      Path : "ComponentPath"
+    
+...
+
+    
+
+

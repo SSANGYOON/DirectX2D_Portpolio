@@ -22,7 +22,7 @@ namespace sy {
 		Vector3 GetScale() { return mScale; };
 
 		void SetPosition(Vector3 position) { mPosition = position; };
-		void SetRotation(Vector3 rotation) { mRotation = rotation; };
+		void SetRotation(Quaternion rotation) { mRotation = rotation; };
 		void SetScale(Vector3 scale) { mScale = scale; };
 
 		Vector3 Foward() { return mFoward; }
@@ -35,7 +35,7 @@ namespace sy {
 		Vector3 mRight;
 		Vector3 mUp;
 		Vector3 mPosition;
-		Vector3 mRotation;
+		Quaternion mRotation;
 		Vector3 mScale;
 		Matrix mWorld;
     };

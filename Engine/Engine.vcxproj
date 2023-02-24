@@ -181,6 +181,7 @@
     <ClInclude Include="syScript.h" />
     <ClInclude Include="syShader.h" />
     <ClInclude Include="syGraphics.h" />
+    <ClInclude Include="sySpriteAnimation.h" />
     <ClInclude Include="sySpriteRenderrer.h" />
     <ClInclude Include="OpeningScene.h" />
     <ClInclude Include="syTexture.h" />
@@ -213,6 +214,7 @@
     <ClCompile Include="syResource.cpp" />
     <ClCompile Include="syScript.cpp" />
     <ClCompile Include="syShader.cpp" />
+    <ClCompile Include="sySpriteAnimation.cpp" />
     <ClCompile Include="sySpriteRenderrer.cpp" />
     <ClCompile Include="OpeningScene.cpp" />
     <ClCompile Include="syTexture.cpp" />
