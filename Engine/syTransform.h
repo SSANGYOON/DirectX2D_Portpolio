@@ -18,7 +18,7 @@ namespace sy {
 		Transform* GetParent() { return mParent; }
 
 		Vector3 GetPosition() { return mPosition; };
-		Vector3 GetRotation() { return mRotation; };
+		Quaternion GetRotation() { return mRotation; };
 		Vector3 GetScale() { return mScale; };
 
 		void SetPosition(Vector3 position) { mPosition = position; };
