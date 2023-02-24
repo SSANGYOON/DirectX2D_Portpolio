@@ -65,6 +65,12 @@ namespace sy::renderrer
 			, gridShader->GetVSBlobBufferSize()
 			, gridShader->GetInputLayoutAddressOf());
 
+		std::shared_ptr<Shader> FadeInOutShader = ResourceManager::Find<Shader>(L"FadeInOutShader");
+		GetDevice()->CreateInputLayout(arrLayoutDesc, 3
+			, FadeInOutShader->GetVSBlobBufferPointer()
+			, FadeInOutShader->GetVSBlobBufferSize()
+			, FadeInOutShader->GetInputLayoutAddressOf());
+
 #pragma endregion
 #pragma region sampler state
 		D3D11_SAMPLER_DESC samplerDesc = {};
@@ -261,6 +267,13 @@ namespace sy::renderrer
 		gridShader->SetBSState(BSType::AlphaBlend);
 
 		ResourceManager::Insert<Shader>(L"GridShader", gridShader);
+
+		// FadeInOutCharacter
+		std::shared_ptr<Shader> FadeInOutShader = std::make_shared<Shader>();
+		FadeInOutShader->Create(ShaderStage::VS, L"SpriteVS.hlsl", "main");
+		FadeInOutShader->Create(ShaderStage::PS, L"FadeInOutPS.hlsl", "main");
+
+		ResourceManager::Insert<Shader>(L"FadeInOutShader", FadeInOutShader);
 	}
 
 	void LoadTexture()
@@ -268,6 +281,7 @@ namespace sy::renderrer
 		ResourceManager::Load<Texture>(L"SmileTexture", L"Smile.png");
 		ResourceManager::Load<Texture>(L"DefaultSprite", L"Light.png");
 		ResourceManager::Load<Texture>(L"HPBarTexture", L"HPBar.png");
+		ResourceManager::Load<Texture>(L"FadeInOutTexture", L"AerialAttackOnehanded4 #161866.png");
 	}
 
 	void LoadMaterial()
@@ -290,6 +304,8 @@ namespace sy::renderrer
 		spriteMaterial->SetTexture(spriteTexture);
 		ResourceManager::Insert<Material>(L"SpriteMaterial", spriteMaterial);
 
+
+
 		// UI
 		std::shared_ptr <Texture> uiTexture = ResourceManager::Find<Texture>(L"HPBarTexture");
 		std::shared_ptr<Shader> uiShader = ResourceManager::Find<Shader>(L"UIShader");
@@ -304,6 +320,15 @@ namespace sy::renderrer
 		std::shared_ptr<Material> gridMaterial = std::make_shared<Material>();
 		gridMaterial->SetShader(gridShader);
 		ResourceManager::Insert<Material>(L"GridMaterial", gridMaterial);
+
+		// FadeInOut
+		std::shared_ptr <Texture> FadeInOutTexture = ResourceManager::Find<Texture>(L"FadeInOutTexture");
+		std::shared_ptr<Shader> FadeInOutShader = ResourceManager::Find<Shader>(L"FadeInOutShader");
+		std::shared_ptr<Material> FadeInOutMaterial = std::make_shared<Material>();
+		FadeInOutMaterial->SetRenderingMode(RenderingMode::Transparent);
+		FadeInOutMaterial->SetShader(FadeInOutShader);
+		FadeInOutMaterial->SetTexture(FadeInOutTexture);
+		ResourceManager::Insert<Material>(L"FadeInOutMaterial", FadeInOutMaterial);
 	}
 
 	void Initialize()

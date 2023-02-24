@@ -17,14 +17,47 @@ namespace sy
 	}
 	void FadeInScript::Update()
 	{
-		if (dtime < duration)
-			dtime += Time::DeltaTime();
-		else
-			dtime = duration;
-		float fraction = dtime / duration;
+		dtime += Time::DeltaTime();
+		float alpha = 1.0f;
+		switch (state)
+		{
+		case sy::FadeInScript::FADEIN:
+			if (dtime >= fadeIn)
+			{
+				dtime -= fadeIn;
+				state = FadeInScript::IDLE;
+				alpha = 1.0f;
+			}
+			else
+			{
+				alpha = dtime / fadeIn;
+			}
+			break;
+		case sy::FadeInScript::IDLE:
+			if (dtime >= Idle)
+			{
+				dtime -= Idle;
+				state = FadeInScript::FADEOUT;
+				alpha = (fadeOut - dtime) / fadeOut;
+			}
+			else
+			{
+				alpha = 1;
+			}
+			break;
+		case sy::FadeInScript::FADEOUT:
+			if (dtime >= fadeOut)
+			{
+				dtime = fadeOut;
+			}
+			alpha = (fadeOut - dtime) / fadeOut;
+			break;
+		default:
+			break;
+		}
 		std::shared_ptr<Material> material = GetOwner()->GetComponent<SpriteRenderrer>()->GetMaterial();
 		
-		material->SetData(GPUParam::Float, &fraction);
+		material->SetData(GPUParam::Float, &alpha);
 	}
 	void FadeInScript::FixedUpdate()
 	{

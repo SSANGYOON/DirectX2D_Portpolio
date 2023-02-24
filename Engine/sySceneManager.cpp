@@ -53,7 +53,6 @@ namespace sy
 		std::shared_ptr<Material> spriteMaterial = ResourceManager::Find<Material>(L"SpriteMaterial");
 		sr->SetMaterial(spriteMaterial);
 		sr->SetMesh(mesh);
-		spriteObj->AddComponent<FadeInScript>();
 
 		//SMILE RECT
 		GameObject* obj = object::Instantiate<GameObject>(LayerType::Player);
@@ -97,6 +96,19 @@ namespace sy
 		hpsr->SetMaterial(hpspriteMaterial);
 
 		//hpBar->Pause();
+
+		// FadeInOut
+		GameObject* fadeInOut = object::Instantiate<GameObject>(LayerType::Player);
+		fadeInOut->SetName(L"JK");
+		tr = fadeInOut->GetComponent<Transform>();
+		tr->SetPosition(Vector3(0.0f, 0.0f, 9.0f));
+
+		sr = fadeInOut->AddComponent<SpriteRenderrer>();
+		std::shared_ptr<Mesh> FadeInOutMesh = ResourceManager::Find<Mesh>(L"RectMesh");
+		std::shared_ptr<Material> FadeInOutMaterial = ResourceManager::Find<Material>(L"FadeInOutMaterial");
+		sr->SetMaterial(FadeInOutMaterial);
+		sr->SetMesh(FadeInOutMesh);
+		fadeInOut->AddComponent<FadeInScript>();
 
 		mActiveScene->Initialize();
 	}
