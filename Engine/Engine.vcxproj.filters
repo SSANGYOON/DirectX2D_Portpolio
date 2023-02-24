@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{55c32de1-725b-4bc7-ab4c-a55a2a5d9c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{4e107913-5518-4098-949c-cb734022a72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="High level Interface">
+      <UniqueIdentifier>{b2e7858d-c0f1-4041-9a1d-28e5f8e05024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{a2995c0f-c7d9-433b-8b5b-ef0f82c45575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Manager">
+      <UniqueIdentifier>{c4643a9e-1993-4a8e-9df9-5718ca51390b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Layer">
+      <UniqueIdentifier>{e3d3dab3-b26a-41a6-8951-14351cd5772a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{a7c40897-fb5b-4b67-adf8-b4d2c02ecfe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{c5d1c62a-4d5f-4252-9cda-07d53663858d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{bcc3767c-3582-4ec3-b228-6ae3c56d8ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{336298fd-e54f-4dc8-b3bc-07993e925092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Mesh">
+      <UniqueIdentifier>{c0c953b6-f353-4a2c-9b50-fcad4a7c5eed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Shader">
+      <UniqueIdentifier>{0f23f5a9-11f7-4dc9-819d-27c431915e30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Manager">
+      <UniqueIdentifier>{0b2f4cf5-3ac4-4d9e-83c7-64f7cd585075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Material">
+      <UniqueIdentifier>{75f89b78-7b8b-4e48-9acb-83e19fc35e0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{69f4b412-e417-4119-8499-80b6a8c31c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{f5af4338-6469-4d98-8216-496e3c8535d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buffers">
+      <UniqueIdentifier>{f5605e1a-aad6-4309-9e51-f744c8845704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Renderrer">
+      <UniqueIdentifier>{867c0166-2c09-4e48-9f53-162f4232c7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Renderrer\MeshRenderer">
+      <UniqueIdentifier>{a2252e13-9bac-49a3-9cb6-b750eff497f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConstantBuffer">
+      <UniqueIdentifier>{bb6a11b2-10c4-4de1-bca4-7a48d9b840a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{a62de67c-22f3-45ec-8117-154ee49644ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Renderrer\SpriteRenderrer">
+      <UniqueIdentifier>{f64332e5-1edd-412f-a47b-00dae3223370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Math">
+      <UniqueIdentifier>{8ad880e7-4667-4e89-97ea-dc6acaa2dbf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Script">
+      <UniqueIdentifier>{b59b58ca-741e-4bb5-8aef-7decbe4972b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{7666c64f-8034-4383-b036-74d36e5462fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{5b5ed8c2-525b-4601-96d3-b3ba0b25fc2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\OpeningScene">
+      <UniqueIdentifier>{240fb628-3641-4f70-bf36-57f7ca8c4ab8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="syGraphicDevice.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="syApplication.cpp">
+      <Filter>High level Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="syShader.cpp">
+      <Filter>Resource\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="syResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="sySceneManager.cpp">
+      <Filter>Scene\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="syEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="syGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="syRenderrer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="syTransform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="OpeningScene.cpp">
+      <Filter>Scene\OpeningScene</Filter>
+    </ClCompile>
+    <ClCompile Include="syScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="syLayer.cpp">
+      <Filter>Scene\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="syConstantBuffer.cpp">
+      <Filter>ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="syResourceManager.cpp">
+      <Filter>Resource\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="syMesh.cpp">
+      <Filter>Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="syTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="syMaterial.cpp">
+      <Filter>Resource\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="syBaseRenderrer.cpp">
+      <Filter>Component\Renderrer</Filter>
+    </ClCompile>
+    <ClCompile Include="syMeshRenderrer.cpp">
+      <Filter>Component\Renderrer\MeshRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="sySpriteRenderrer.cpp">
+      <Filter>Component\Renderrer\SpriteRenderrer</Filter>
+    </ClCompile>
+    <ClCompile Include="syMath.cpp">
+      <Filter>Common\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="syCamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="syScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="syCameraScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="syInput.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="syTime.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="syPlayerScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="syGridScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="syComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="syFadeInScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="syGraphicDevice.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="syApplication.h">
+      <Filter>High level Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="syResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="syShader.h">
+      <Filter>Resource\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="syGraphics.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="sySceneManager.h">
+      <Filter>Scene\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="syScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="syEngine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="syEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="syGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="syRenderrer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="syTransform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="OpeningScene.h">
+      <Filter>Scene\OpeningScene</Filter>
+    </ClInclude>
+    <ClInclude Include="syLayer.h">
+      <Filter>Scene\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="syConstantBuffer.h">
+      <Filter>ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="syResourceManager.h">
+      <Filter>Resource\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="syMesh.h">
+      <Filter>Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="syTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="syMaterial.h">
+      <Filter>Resource\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="syBaseRenderrer.h">
+      <Filter>Component\Renderrer</Filter>
+    </ClInclude>
+    <ClInclude Include="syMeshRenderrer.h">
+      <Filter>Component\Renderrer\MeshRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="sySpriteRenderrer.h">
+      <Filter>Component\Renderrer\SpriteRenderrer</Filter>
+    </ClInclude>
+    <ClInclude Include="syMath.h">
+      <Filter>Common\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="syCamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="syScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="syCameraScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="syInput.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="syTime.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="syPlayerScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="syObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="syGridScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="syComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="syFadeInScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="syMath.inl">
+      <Filter>Common\Math</Filter>
+    </None>
+  </ItemGroup>
+</Project>

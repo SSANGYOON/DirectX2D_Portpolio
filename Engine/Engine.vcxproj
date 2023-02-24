@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{4de68107-a19d-48a7-99fb-0befbc102392}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)External;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)External\DirectXTex\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\Lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)External;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)External\DirectXTex\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\Lib\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="syCamera.h" />
+    <ClInclude Include="syCameraScript.h" />
+    <ClInclude Include="syFadeInScript.h" />
+    <ClInclude Include="syGridScript.h" />
+    <ClInclude Include="syInput.h" />
+    <ClInclude Include="syMeshRenderrer.h" />
+    <ClInclude Include="syBaseRenderrer.h" />
+    <ClInclude Include="syMaterial.h" />
+    <ClInclude Include="syMesh.h" />
+    <ClInclude Include="syComponent.h" />
+    <ClInclude Include="syConstantBuffer.h" />
+    <ClInclude Include="syEngine.h" />
+    <ClInclude Include="syEntity.h" />
+    <ClInclude Include="syEnums.h" />
+    <ClInclude Include="syGameObject.h" />
+    <ClInclude Include="syLayer.h" />
+    <ClInclude Include="syObject.h" />
+    <ClInclude Include="syPlayerScript.h" />
+    <ClInclude Include="syRenderrer.h" />
+    <ClInclude Include="syResourceManager.h" />
+    <ClInclude Include="syScene.h" />
+    <ClInclude Include="sySceneManager.h" />
+    <ClInclude Include="syApplication.h" />
+    <ClInclude Include="Buffers.h" />
+    <ClInclude Include="CommonInclude.h" />
+    <ClInclude Include="syGraphicDevice.h" />
+    <ClInclude Include="syResource.h" />
+    <ClInclude Include="syScript.h" />
+    <ClInclude Include="syShader.h" />
+    <ClInclude Include="syGraphics.h" />
+    <ClInclude Include="sySpriteRenderrer.h" />
+    <ClInclude Include="OpeningScene.h" />
+    <ClInclude Include="syTexture.h" />
+    <ClInclude Include="syTime.h" />
+    <ClInclude Include="syTransform.h" />
+    <ClInclude Include="syMath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="syCamera.cpp" />
+    <ClCompile Include="syCameraScript.cpp" />
+    <ClCompile Include="syFadeInScript.cpp" />
+    <ClCompile Include="syGridScript.cpp" />
+    <ClCompile Include="syInput.cpp" />
+    <ClCompile Include="syMeshRenderrer.cpp" />
+    <ClCompile Include="syBaseRenderrer.cpp" />
+    <ClCompile Include="syMaterial.cpp" />
+    <ClCompile Include="syMesh.cpp" />
+    <ClCompile Include="syComponent.cpp" />
+    <ClCompile Include="syConstantBuffer.cpp" />
+    <ClCompile Include="syEntity.cpp" />
+    <ClCompile Include="syGameObject.cpp" />
+    <ClCompile Include="syLayer.cpp" />
+    <ClCompile Include="syPlayerScript.cpp" />
+    <ClCompile Include="syRenderrer.cpp" />
+    <ClCompile Include="syResourceManager.cpp" />
+    <ClCompile Include="syScene.cpp" />
+    <ClCompile Include="sySceneManager.cpp" />
+    <ClCompile Include="syApplication.cpp" />
+    <ClCompile Include="syGraphicDevice.cpp" />
+    <ClCompile Include="syResource.cpp" />
+    <ClCompile Include="syScript.cpp" />
+    <ClCompile Include="syShader.cpp" />
+    <ClCompile Include="sySpriteRenderrer.cpp" />
+    <ClCompile Include="OpeningScene.cpp" />
+    <ClCompile Include="syTexture.cpp" />
+    <ClCompile Include="syTime.cpp" />
+    <ClCompile Include="syTransform.cpp" />
+    <ClCompile Include="syMath.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="syMath.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
